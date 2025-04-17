@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="service-header">
+    <header class="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -17,9 +17,15 @@
                 </a>
             </div>
             <nav class="nav-links">
-                <a href="#service-overview">サービス概要</a>
-                <a href="#features">特徴</a>
-                <a href="#pricing">料金プラン</a>
+                <div class="service-dropdown">
+                    <a href="#services">サービス</a>
+                    <div class="service-dropdown-content">
+                        <a href="service-pm-guild.html">PM Guild</a>
+                        <a href="service-dx-marketplace.html">DX Tools Marketplace</a>
+                        <a href="service-task-bizsupport.html">TASK BizSupport</a>
+                    </div>
+                </div>
+                <a href="#company">会社概要</a>
                 <a href="#contact">お問い合わせ</a>
             </nav>
             <div class="mobile-menu-btn">
@@ -123,7 +129,7 @@
                             <li>カスタマイズ可能</li>
                             <li>技術サポート</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card featured">
                         <h3>カスタムビルド</h3>
@@ -133,7 +139,7 @@
                             <li>完全カスタマイズ</li>
                             <li>技術サポート</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card">
                         <h3>PM Guild認定会員</h3>
@@ -143,7 +149,7 @@
                             <li>優先サポート</li>
                             <li>カスタマイズ可能</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                 </div>
             </div>
@@ -153,7 +159,27 @@
             <div class="cta-content fade-in">
                 <h2>DX Tools Marketplaceで、あなたの業務を効率化しませんか？</h2>
                 <p>まずはお気軽にご相談ください。あなたの業務に最適なツールを提案させていただきます。</p>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                <a href="#contact" class="cta-button">お問い合わせ</a>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>お気軽にお問い合わせください</h2>
+            <p>サービスについてのご質問や導入のご相談など、お気軽にお問い合わせください。</p>
+            <a href="#contact" class="cta-button">お問い合わせ</a>
+        </div>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <div class="google-form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8DgjZHw-Gg0T6DHTE7cPj5-y-vAS7VTR44JPwo5zgOTGcSw/viewform?embedded=true" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                        読み込んでいます...
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>

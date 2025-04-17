@@ -34,17 +34,10 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
 }
 
 .logo img {
@@ -104,29 +97,48 @@ body {
 
 /* ヒーローセクション */
 .hero {
+    position: relative;
     height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background-image: url('index背景.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 2rem;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(76, 161, 175, 0.85));
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
+    padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button {
@@ -1508,5 +1520,78 @@ body {
         height: 120px;
         margin-top: -30px;
         margin-bottom: -30px;
+    }
+}
+
+.cta-section {
+    background-color: var(--section-bg);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--light-text);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1a2632;
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 3rem 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Googleフォームのスタイル */
+.google-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.google-form-container iframe {
+    width: 100%;
+    height: 1200px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .google-form-container {
+        padding: 0;
+    }
+    
+    .google-form-container iframe {
+        height: 1000px;
     }
 } 

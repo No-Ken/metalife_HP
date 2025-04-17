@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="service-header">
+    <header class="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -17,8 +17,15 @@
                 </a>
             </div>
             <nav class="nav-links">
-                <a href="#service-overview">サービス概要</a>
-                <a href="#development-process">開発プロセス</a>
+                <div class="service-dropdown">
+                    <a href="#services">サービス</a>
+                    <div class="service-dropdown-content">
+                        <a href="service-pm-guild.html">PM Guild</a>
+                        <a href="service-dx-marketplace.html">DX Tools Marketplace</a>
+                        <a href="service-task-bizsupport.html">TASK BizSupport</a>
+                    </div>
+                </div>
+                <a href="#company">会社概要</a>
                 <a href="#contact">お問い合わせ</a>
             </nav>
             <div class="mobile-menu-btn">
@@ -31,37 +38,37 @@
 
     <main>
         <section class="service-hero">
-            <div class="service-hero-content fade-in">
+            <div class="service-hero-content">
                 <h1>PM Guild</h1>
                 <p>AIを活用した効率的な開発サービスで、<br>あなたのアイデアを最速で形にします。</p>
             </div>
         </section>
 
         <section class="service-details">
-            <div class="service-overview fade-in-up">
+            <div class="service-overview">
                 <h2>サービス概要</h2>
                 <p>PM Guildは、AIを活用した開発サービスです。MVP開発から内部ツール開発まで、プロジェクトマネジメントの専門知識を活かした高品質なソリューションを提供します。</p>
             </div>
 
             <div class="service-features">
-                <div class="feature-card slide-in-left">
+                <div class="feature-card">
                     <i class="fas fa-code"></i>
                     <h3>MVP開発</h3>
                     <p>アイデアを素早く形に。AIを活用した効率的な開発で、短期間でのMVPリリースを実現します。</p>
                 </div>
-                <div class="feature-card fade-in-up">
+                <div class="feature-card">
                     <i class="fas fa-tools"></i>
                     <h3>内部ツール開発</h3>
                     <p>業務効率化に特化した内部ツールを開発。既存システムとの連携もスムーズに行います。</p>
                 </div>
-                <div class="feature-card slide-in-right">
+                <div class="feature-card">
                     <i class="fas fa-robot"></i>
                     <h3>AI活用</h3>
                     <p>開発プロセスの各段階でAIを活用。品質を保ちながら、開発スピードを向上させます。</p>
                 </div>
             </div>
 
-            <div class="service-process fade-in">
+            <div class="service-process">
                 <h2>開発プロセス</h2>
                 <div class="process-steps">
                     <div class="process-step">
@@ -87,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="service-benefits fade-in">
+            <div class="service-benefits">
                 <h2>PM Guildを選ぶ理由</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
@@ -113,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="service-pricing fade-in">
+            <div class="service-pricing">
                 <h2>料金プラン</h2>
                 <div class="pricing-cards">
                     <div class="pricing-card">
@@ -125,7 +132,7 @@
                             <li>開発・テスト</li>
                             <li>デプロイ</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card featured">
                         <h3>内部ツール開発</h3>
@@ -136,7 +143,7 @@
                             <li>開発・テスト</li>
                             <li>導入支援</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card">
                         <h3>カスタム開発</h3>
@@ -147,17 +154,34 @@
                             <li>継続的改善</li>
                             <li>運用支援</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="service-cta">
-            <div class="cta-content fade-in">
-                <h2>PM Guildで、あなたのアイデアを形にしませんか？</h2>
-                <p>まずはお気軽にご相談ください。あなたのプロジェクトに最適なソリューションを提案させていただきます。</p>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+            <div class="cta-content">
+                <h2>PM Guildで、あなたのアイデアを実現しませんか？</h2>
+                <p>まずはお気軽にご相談ください。あなたのプロジェクトに最適な開発プランを提案させていただきます。</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>お気軽にお問い合わせください</h2>
+            <p>プロジェクトについてのご相談やご質問など、お気軽にお問い合わせください。</p>
+        </div>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="google-form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8DgjZHw-Gg0T6DHTE7cPj5-y-vAS7VTR44JPwo5zgOTGcSw/viewform?embedded=true" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                        読み込んでいます...
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>
