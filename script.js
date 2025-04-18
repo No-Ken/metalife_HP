@@ -2,19 +2,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // モバイルメニューの制御
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const serviceDropdown = document.querySelector('.service-dropdown');
     const header = document.querySelector('.header');
 
+    // モバイルメニューボタンのクリックイベント
     mobileMenuBtn.addEventListener('click', function() {
         navLinks.classList.toggle('active');
         mobileMenuBtn.classList.toggle('active');
     });
 
+    // サービスドロップダウンの制御（モバイル用）
+    if (serviceDropdown) {
+        const dropdownLink = serviceDropdown.querySelector('a');
+        dropdownLink.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                serviceDropdown.classList.toggle('active');
+            }
+        });
+    }
+
+    // 画面外クリックでメニューを閉じる
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            if (serviceDropdown) {
+                serviceDropdown.classList.remove('active');
+            }
+        }
+    });
+
     // スムーズスクロール
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            // サービスドロップダウンのトリガーの場合はスキップ
+            if (this.parentElement.classList.contains('service-dropdown')) {
+                return;
+            }
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            
+            // 外部ページへのアンカーリンクの場合
+            if (href.includes('index.html#')) {
+                window.location.href = href;
+                return;
+            }
+
+            // 同じページ内のアンカーリンクの場合
+            const target = document.querySelector(href);
             if (target) {
+                // モバイルメニューを閉じる
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+                
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -29,10 +71,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop && scrollTop > 100) {
             header.style.transform = 'translateY(-100%)';
+            // モバイルメニューを閉じる
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            if (serviceDropdown) {
+                serviceDropdown.classList.remove('active');
+            }
         } else {
             header.style.transform = 'translateY(0)';
         }
         lastScrollTop = scrollTop;
+    });
+
+    // ウィンドウリサイズ時の処理
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            // PCサイズになった時にモバイルメニューの状態をリセット
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            if (serviceDropdown) {
+                serviceDropdown.classList.remove('active');
+            }
+        }
     });
 
     // フォーム送信処理
