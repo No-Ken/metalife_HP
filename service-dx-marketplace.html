@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DX Tools Marketplace - メタライフコーポレーション</title>
+    <title>DXツール　マーケット - メタライフコーポレーション</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="service-header">
+    <header class="header">
         <div class="header-container">
             <div class="logo">
-                <a href="index.html">
+                <a href="./index.html">
                     <img src="メタライフロゴver2.png" alt="メタライフコーポレーション">
                 </a>
             </div>
             <nav class="nav-links">
-                <a href="#service-overview">サービス概要</a>
-                <a href="#features">特徴</a>
-                <a href="#pricing">料金プラン</a>
-                <a href="#contact">お問い合わせ</a>
+                <div class="service-dropdown">
+                    <a href="./index.html#services">サービス</a>
+                    <div class="service-dropdown-content">
+                        <a href="./service-pm-guild.html">PM ギルド</a>
+                        <a href="./service-dx-marketplace.html">DX ツール マーケット</a>
+                        <a href="./service-task-bizsupport.html">TASK Bizサポート</a>
+                    </div>
+                </div>
+                <a href="./index.html#company-profile">会社概要</a>
+                <a href="./index.html#contact">お問い合わせ</a>
             </nav>
             <div class="mobile-menu-btn">
                 <span></span>
@@ -33,22 +39,22 @@
     <main>
         <section class="service-hero">
             <div class="service-hero-content fade-in">
-                <h1>DX Tools Marketplace</h1>
-                <p>ニッチな業務課題に特化したツールのマーケットプレイスで、<br>あなたの業務を効率化します。</p>
+                <h1>DXツール　マーケット</h1>
+                <p>ニッチな業務課題改善ツールからスクラッチ開発された中規模ツールの要件定義とコードのマーケットプレイスで、<br>あなたの業務を低価格で効率化します。</p>
             </div>
         </section>
 
         <section class="service-details">
             <div class="service-overview fade-in-up">
                 <h2>サービス概要</h2>
-                <p>DX Tools Marketplaceは、標準的なSaaSでは対応できない、独自の業務フローに最適なソリューションを提供するマーケットプレイスです。ニッチな業務課題に特化したツールを、すぐに導入・活用できます。</p>
+                <p>DXツール　マーケットは、標準的なSaaSやオープンソースでは対応できない、独自の業務フローに最適なソリューションを提供するマーケットプレイスです。部分最適のツールをカスタマイズして、すぐに導入・活用できます。</p>
             </div>
 
             <div class="service-features">
                 <div class="feature-card slide-in-left">
                     <i class="fas fa-bolt"></i>
                     <h3>即時導入</h3>
-                    <p>必要なツールをすぐに導入・利用開始。複雑な設定やカスタマイズは不要です。</p>
+                    <p>やりたいことを書くだけで、自然言語処理により最適なツールのコードを検索します。開発の手間がなくコードを入手可能です。</p>
                 </div>
                 <div class="feature-card fade-in-up">
                     <i class="fas fa-puzzle-piece"></i>
@@ -57,8 +63,8 @@
                 </div>
                 <div class="feature-card slide-in-right">
                     <i class="fas fa-cogs"></i>
-                    <h3>カスタマイズ</h3>
-                    <p>購入したツールを自社の業務フローに合わせてカスタマイズ可能です。</p>
+                    <h3>自社で独自開発したツールが販売可能</h3>
+                    <p>スクラッチ開発した独自ツールを販売可能です。数万から数千万円かけたツールの開発費用の副次的な回収が可能になります。</p>
                 </div>
             </div>
 
@@ -66,7 +72,7 @@
                 <h2>提供製品</h2>
                 <div class="product-categories">
                     <div class="product-category">
-                        <h3>PM Guild開発製品</h3>
+                        <h3>PM ギルド開発製品</h3>
                         <ul>
                             <li>プロジェクト管理ツール</li>
                             <li>タスク管理システム</li>
@@ -116,34 +122,33 @@
                 <h2>料金プラン</h2>
                 <div class="pricing-cards">
                     <div class="pricing-card">
-                        <h3>買取プラン</h3>
-                        <div class="price">¥50,000〜</div>
+                        <h3>コード買取プラン</h3>
+                        <div class="rule">自社でエンジニアを抱えている会社向けのプラン</div>
                         <ul>
                             <li>ツールの完全所有権</li>
-                            <li>カスタマイズ可能</li>
-                            <li>技術サポート</li>
+                            <li>自分でコードを編集可能</li>
+                            <li>追加料金で技術サポート</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card featured">
                         <h3>カスタムビルド</h3>
-                        <div class="price">¥100,000〜</div>
+                        <div class="rule">販売されているツールのコードを利用した受託開発のプラン</div>
                         <ul>
-                            <li>要件に合わせた開発</li>
-                            <li>完全カスタマイズ</li>
-                            <li>技術サポート</li>
+                            <li>要件に合わせた受託開発</li>
+                            <li>完全カスタマイズ可能</li>
+                            <li>技術サポートあり</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                     <div class="pricing-card">
-                        <h3>PM Guild認定会員</h3>
-                        <div class="price">¥30,000〜</div>
+                        <h3>PM ギルド認定会員</h3>
+                        <div class="rule">PMギルドで複数案件をこなすと、格安でコードを利用可能な会員限定のプラン</div>
                         <ul>
                             <li>特別価格での提供</li>
-                            <li>優先サポート</li>
                             <li>カスタマイズ可能</li>
                         </ul>
-                        <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                        <a href="#contact" class="cta-button">お問い合わせ</a>
                     </div>
                 </div>
             </div>
@@ -151,9 +156,26 @@
 
         <section class="service-cta">
             <div class="cta-content fade-in">
-                <h2>DX Tools Marketplaceで、あなたの業務を効率化しませんか？</h2>
+                <h2>DXツール　マーケットで、あなたの業務を効率化しませんか？</h2>
                 <p>まずはお気軽にご相談ください。あなたの業務に最適なツールを提案させていただきます。</p>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>お気軽にお問い合わせください</h2>
+            <p>サービスについてのご質問や導入のご相談など、お気軽にお問い合わせください。</p>
+        </div>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="google-form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8DgjZHw-Gg0T6DHTE7cPj5-y-vAS7VTR44JPwo5zgOTGcSw/viewform?embedded=true" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                        読み込んでいます...
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>
